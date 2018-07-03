@@ -1,0 +1,13 @@
+{
+  "description": "微信小程序-天气",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram",
+  "appid": "	wxa108c9a7bd0eb47f",
+  "projectname": "wxapp-weather",
+  "miniprogramRoot": "./dist"
+}

@@ -1,0 +1,64 @@
+<style lang="less">
+    .parent{
+        margin-left: 0rpx;
+        margin-right: 0rpx;
+    }
+    .bgImg{
+        height: 1000rpx;
+        width: 100%;
+    }
+    .content{
+        display: flex;
+        flex-direction: row;
+    }
+    .item{
+        flex: 1;
+        height: 100rpx;
+    }
+    .smitem{
+
+    }
+</style>
+<template>
+    <view class="parent">
+        <image class="bgImg" mode="aspectFill" src="{{bgSrc}}"></image>
+        <view class="content">
+            <view class="content">
+                <view class="content">
+                    <view class="smite">今天</view>
+                    <view class="smite">23°C</view>
+                </view> 
+                <view class="content">
+                    <view class="smite">雷阵雨转阴</view>
+                    <view class="smite">icon</view>
+                </view>
+            </view>
+            <view class="content">
+                <view >
+                    <view class="smite">明天</view>
+                    <view class="smite">33°C</view>
+                    <view class="smite">多云转晴</view>
+                    <view class="smite">icon</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>
+<script>
+import wepy from 'wepy'
+
+export default class Index extends wepy.page {
+    config = {
+        navigationBarTitleText: '趣天气',
+        usingComponents: {
+            'wxc-flex': '../../packages/@minui/wxc-flex/dist/index'
+        }
+    } 
+    data = {
+        bgSrc: 'https://qrcode.gxuann.cn/白天_1.png',
+    }
+    methods = {
+        
+    }
+}
+</script>
