@@ -2,14 +2,12 @@
     .parent{
         margin-left: 0rpx;
         margin-right: 0rpx;
+        position: relative;
     }
     .bgImg{
         height: 1000rpx;
-        width: 100%;
-    }
-    .content{
-        display: flex;
-        flex-direction: row;
+        width: 120%;
+        margin-left: -10rpx;
     }
     .main{
         font-size: 30rpx;
@@ -27,16 +25,24 @@
         border-width: 1rpx;
     }
     .mainImg{
-        display: block;
-        
+        position: relative;
+        scroll-x:true;
+        z-index: -1;
+    }
+    .now{
+        position: absolute;
+        left: 35%;
+        margin-top: 120rpx;
+        font-size: 120rpx;
+        color: #ffffff;
     }
 </style>
 <template>
     <view class="parent">
-        <view class="mainImg">
-        <view class="share">share</view>
-        <image class="bgImg" mode="aspectFill" src="{{bgSrc}}"></image>
-        </view>
+        <view class="now">9℃</view>
+        <scroll-view class="mainImg">
+        <image class="bgImg" mode="aspectFill" src="{{bgSrc}}" style="-webkit-transition: transform .5s linear;-webkit-transform:translate3d({{transformX}}rpx,0,0)"></image>
+        </scroll-view>
         <view class="weui-flex main">
             <view class="weui-flex__item">
                 <view class="weui-flex ">
@@ -73,9 +79,31 @@ export default class Index extends wepy.page {
     } 
     data = {
         bgSrc: 'https://qrcode.gxuann.cn/白天_1.png',
+        transformX:0
     }
     methods = {
         
+    }
+    onShow(){
+        var obj = this;
+        var transformX = obj.data.transformX;
+        wx.onAccelerometerChange(function(res){
+            console.log(res.x)
+            if(res.x>0){
+                transformX += 2;
+            }else if(res.x<0){
+                transformX -= 2;
+            }
+            if (transformX > 8) {           
+                transformX -= 2;
+            }else if (transformX < -8) {
+                transformX += 2;
+            }
+            console.log(transformX)
+            obj.setData({
+                transformX: transformX,
+            })
+        })
     }
 }
 </script>
