@@ -10,14 +10,14 @@
         margin-left: -10rpx;
     }
     .main{
+        position: absolute;
+        top: 1020rpx;
+        width: 100%;
         font-size: 30rpx;
         background: #ffffff;
         box-shadow:3rpx 3rpx 3rpx 3rpx rgb(199, 198, 198);
         text-align: center;
         padding: 3%;
-    }
-    .weui-flex__item{
-        width: 100%;
     }
     .hr{
         border-color: rgb(199, 198, 198);
@@ -25,15 +25,17 @@
         border-width: 1rpx;
     }
     .mainImg{
-        position: relative;
+        position: absolute;
         scroll-x:true;
         z-index: -1;
     }
     .now{
         position: absolute;
         left: 35%;
+        text-align: center;
         margin-top: 120rpx;
         font-size: 120rpx;
+        line-height: 168rpx;
         color: #ffffff;
     }
     .share{
@@ -82,7 +84,7 @@ export default class Index extends wepy.page {
     config = {
         navigationBarTitleText: '趣天气',
         navigationBarTextStyle: 'white',
-        navigationBarBackgroundColor: '#69ace3',
+        navigationBarBackgroundColor: '#ffffff',
         usingComponents: {
             'wxc-flex': '../../packages/@minui/wxc-flex/dist/index'
         }
@@ -101,7 +103,7 @@ export default class Index extends wepy.page {
         var time = parseInt(new Date().getHours());
         var times = 1;
         console.log(time)
-        if(6 < times && times >18){
+        if(6 < time && time <18){
             times = 1;
             console.log("现在是早上，背景是白天，标题栏颜色是蓝色69ace3")
         }else{
