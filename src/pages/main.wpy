@@ -88,17 +88,19 @@ export default class Index extends wepy.page {
         }
     } 
     data = {
-        bgSrc: 'https://qrcode.gxuann.cn/白天_1.png',
         transformX:0
     }
     methods = {
         
     }
     onLoad(){
+        var bgUrlL = 'https://qrcode.gxuann.cn/白天_1.png';
+        var bgUrlN = 'https://qrcode.gxuann.cn/夜晚_1.png';
         var obj = this;
         var transformX = obj.data.transformX;
         var time = parseInt(new Date().getHours());
         var times = 1;
+        console.log(time)
         if(6 < times && times >18){
             times = 1;
             console.log("现在是早上，背景是白天，标题栏颜色是蓝色69ace3")
@@ -109,7 +111,7 @@ export default class Index extends wepy.page {
         switch (times) {
             case 1:
                 obj.setData({
-                    bgSrc: 'https://qrcode.gxuann.cn/白天_1.png',
+                    bgSrc: bgUrlL,
                 });
                 wx.setNavigationBarColor({
                     frontColor:"#ffffff",
@@ -118,7 +120,7 @@ export default class Index extends wepy.page {
                 break;
             case 2:
                 obj.setData({
-                    bgSrc: 'https://qrcode.gxuann.cn/夜晚_1.png',
+                    bgSrc: bgUrlN,
                 });
                 wx.setNavigationBarColor({
                     frontColor:"#ffffff",
