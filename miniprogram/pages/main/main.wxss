@@ -1,11 +1,10 @@
 /* miniprogram/pages/main/main.wxss */
 .temp{
-  padding-top: 150rpx;
+  padding-top: 100rpx;
   text-align: center;
   font-size: 150rpx;
   line-height: 210rpx;
-  color: white;
-  opacity: 0.8
+  color: white
 }
 
 .weather{
@@ -13,7 +12,7 @@
   font-size: 40rpx;
   line-height: 56rpx;
   color: white;
-  opacity: 0.65
+  opacity: 0.8
 }
 
 .weather-wrapper{
@@ -29,4 +28,39 @@
   height: 100%;
   width: 100%;
   z-index: -1;
+}
+
+.list{
+  margin-top: 80rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  background: white;
+  border-radius: 18rpx;
+  box-shadow: 0 2rpx 50rpx 5rpx #00000034;
+  height: 700rpx;
+}
+.line{
+  border-bottom: 2rpx solid #eaeaea;
+}
+.swiper-tab{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    height: 80rpx;
+    line-height: 80rpx; 
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.swiper-tab-item{
+  width: 80rpx;
+  height: 80rpx;
+  opacity: 0.1
+}
+.active{
+  opacity: 1
+}
+swiper{
+  text-align: center;
 }
