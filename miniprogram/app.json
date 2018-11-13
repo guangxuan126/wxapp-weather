@@ -1,0 +1,14 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/main/main",
+    "pages/about/about"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "趣天气",
+    "navigationBarTextStyle": "black"
+  }
+}

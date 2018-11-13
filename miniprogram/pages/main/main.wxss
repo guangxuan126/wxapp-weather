@@ -1,0 +1,32 @@
+/* miniprogram/pages/main/main.wxss */
+.temp{
+  padding-top: 150rpx;
+  text-align: center;
+  font-size: 150rpx;
+  line-height: 210rpx;
+  color: white;
+  opacity: 0.8
+}
+
+.weather{
+  text-align: center;
+  font-size: 40rpx;
+  line-height: 56rpx;
+  color: white;
+  opacity: 0.65
+}
+
+.weather-wrapper{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.weather-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
