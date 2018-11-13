@@ -5,8 +5,8 @@
   <image class='weather-bg' src='{{bgUrl}}' mode='widthFix'></image>
   <view class='list'>
     <view class="swiper-tab">
-      <image class="swiper-tab-item {{currentTab==0?'active':''}}" src='../../images/temp.png' data-current="0" bindtap="clickTab"></image>
-      <image class="swiper-tab-item {{currentTab==1?'active':''}}" src='../../images/hours.png' data-current="1" bindtap="clickTab"></image>
+      <image class="swiper-tab-item {{currentTab==0?'active':''}}" src='../../images/hours.png' data-current="0" bindtap="clickTab"></image>
+      <image class="swiper-tab-item {{currentTab==1?'active':''}}" src='../../images/temp.png' data-current="1" bindtap="clickTab"></image>
       <image class="swiper-tab-item {{currentTab==2?'active':''}}" src='../../images/status.png' data-current="2" bindtap="clickTab"></image>
     </view>
     <view class='line'></view>
