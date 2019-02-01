@@ -10,7 +10,7 @@
 	},
 	"appid": "wxa108c9a7bd0eb47f",
 	"projectname": "wxapp-weather",
-	"libVersion": "2.2.5",
+	"libVersion": "2.4.0",
 	"condition": {
 		"search": {
 			"current": -1,

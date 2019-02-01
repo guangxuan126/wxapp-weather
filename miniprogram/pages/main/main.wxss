@@ -16,7 +16,8 @@
 }
 
 .weather-wrapper{
-  position: relative;
+  position: fixed;
+  z-index: -1;
   height: 100%;
   width: 100%;
 }
@@ -30,37 +31,3 @@
   z-index: -1;
 }
 
-.list{
-  margin-top: 80rpx;
-  margin-left: 50rpx;
-  margin-right: 50rpx;
-  background: white;
-  border-radius: 18rpx;
-  box-shadow: 0 2rpx 50rpx 5rpx #00000034;
-  height: 700rpx;
-}
-.line{
-  border-bottom: 2rpx solid #eaeaea;
-}
-.swiper-tab{
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    text-align: center;
-    height: 80rpx;
-    line-height: 80rpx; 
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-}
-.swiper-tab-item{
-  width: 80rpx;
-  height: 80rpx;
-  opacity: 0.1
-}
-.active{
-  opacity: 1
-}
-swiper{
-  text-align: center;
-}

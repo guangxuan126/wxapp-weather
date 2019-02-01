@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    currentTab: 0
+    currentTab: 0,
+    forecast: []
   },
   clickTab: function (e) {
     var that = this;
@@ -25,7 +26,7 @@ Page({
    */
   onLoad: function (options) {
     var bgUrlM = '../../images/morning.png';
-    var bgUrlA = '../../images/afternoon.png';
+    var bgUrlA = '../../images/sun2.png';
     var bgUrlN = '../../images/night.png';
     var that = this;
     var time = parseInt(new Date().getHours());
@@ -47,7 +48,7 @@ Page({
         });
         wx.setNavigationBarColor({
           frontColor: "#ffffff",
-          backgroundColor: "#63c9fe"
+          backgroundColor: "#4bacd9"
         });
         break;
       case 2:
@@ -56,7 +57,7 @@ Page({
         });
         wx.setNavigationBarColor({
           frontColor: "#ffffff",
-          backgroundColor: "#d76883"
+          backgroundColor: "#c66445"
         });
         break;
       case 3:
@@ -65,10 +66,21 @@ Page({
         });
         wx.setNavigationBarColor({
           frontColor: "#ffffff",
-          backgroundColor: "#491799"
+          backgroundColor: "#05111d"
         });
         break;
     }
+    wx.request({
+      url: 'https://free-api.heweather.com/s6/weather',
+      data: {
+        location: '北辰区',
+        key: '5ddb6ec7a4814816864f58b7afce7110'
+      },
+      success: res=> {
+        let data = res.data.HeWeather6[0]
+        console.log(data)
+      }
+    })
   },
 
   /**
