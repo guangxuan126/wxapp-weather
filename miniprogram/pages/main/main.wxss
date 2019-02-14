@@ -1,6 +1,5 @@
 /* miniprogram/pages/main/main.wxss */
 .temp{
-  padding-top: 100rpx;
   text-align: center;
   font-size: 150rpx;
   line-height: 210rpx;
@@ -12,14 +11,12 @@
   font-size: 40rpx;
   line-height: 56rpx;
   color: white;
-  opacity: 0.8
 }
 
 .weather-wrapper{
-  position: fixed;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
+  position: relative;
+  padding-top: 140rpx;
+  padding-bottom: 1000rpx;
 }
 
 .weather-bg{
@@ -31,3 +28,17 @@
   z-index: -1;
 }
 
+.today{
+  margin-top:130rpx; 
+  position: relative;
+  text-align: center;
+  border-radius: 20rpx;
+  height: 56rpx;
+  width: 80%;
+  left: 10%
+}
+.today-text{
+  font-size: 40rpx;
+  line-height: 56rpx;
+  color: white;
+}

@@ -1,7 +1,7 @@
 <!--miniprogram/pages/main/main.wxml-->
 <view class='weather-wrapper'>
-  <view class='temp'>12°C</view>
-  <view class='weather'>晴天</view>
+  <view class='temp'>{{nowTemp}}</view>
+  <view class='weather'>{{nowWeather}}</view>
   <image class='weather-bg' src='{{bgUrl}}' mode='widthFix'></image>
   <image class='weather-bg' src='../../images/bg.png'></image>
 </view>
